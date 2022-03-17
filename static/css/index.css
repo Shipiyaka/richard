@@ -1,0 +1,201 @@
+body {
+  font-size: 1em;
+  min-width: 320px;
+  margin: 0;
+  font-family: "Gothic A1", sans-serif;
+  color: white;
+  font-weight: 400;
+}
+
+html,
+body {
+  height: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Gothic A1", sans-serif;
+  font-weight: 400;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+section,
+div,
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+text {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 85%;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+#main-banner {
+  background: linear-gradient(
+      287.15deg,
+      #450e4b 0%,
+      #3c0c41 24.48%,
+      rgba(207, 0, 99, 0) 100%
+    ),
+    #cf0063;
+  height: 100vh;
+  position: relative;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 25px;
+  font-size: 16px;
+}
+
+header .nav-top {
+  list-style-type: none;
+  justify-content: end;
+  max-width: 50%;
+}
+
+.logo img {
+  width: 120px;
+  max-width: none;
+}
+
+header .nav-top li {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+header .nav-top li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  transition: color 0.1s linear;
+}
+
+header .nav-top li a:hover {
+  color: #f8c10c;
+}
+
+.main-banner-text {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  z-index: 2;
+}
+
+.main-banner-text h1 {
+  font-size: 75px;
+}
+
+.main-banner-text h2 {
+  font-size: 25px;
+}
+
+.getter {
+  padding: 20px 40px;
+  background: #fc0a7e;
+  border-radius: 3px;
+  border: 0;
+  color: white;
+  margin-top: 20px;
+}
+
+.getter:hover {
+  background: #f89ac8;
+  color: black;
+  transition: 0.1s linear;
+}
+
+.back {
+  position: absolute;
+  right: 0;
+  top: 150px;
+  z-index: 1;
+  height: 75%;
+  object-fit: scale-down;
+}
+
+.arrow {
+  position: absolute;
+  bottom: 3%;
+  right: 50%;
+}
+
+#profile-view {
+  background: #1b1b1b;
+  height: 100vh;
+  position: relative;
+}
+
+.text-container {
+  max-width: 44%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+h3 {
+  font-size: 31px;
+}
+
+.text-container h3 {
+  padding-top: 30px;
+}
+
+h4 {
+  color: #a8a8a8;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.text-container h4 {
+  padding-top: 100px;
+}
+
+#profile-view img {
+  position: absolute;
+  bottom: 0;
+  width: 70%;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+#proposal {
+  margin: 0 auto;
+  vertical-align: middle;
+}
+
+.proposal-item {
+  display: flex;
+}
+
+#proposal h3 {
+  color: #000000;
+}
+
+#proposal p {
+  color: #000000;
+}
+
+#proposal img {
+  height: 60%;
+}
