@@ -66,11 +66,12 @@ header {
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  padding: 25px;
+  padding: 25px 0;
   font-size: 16px;
   @media only screen and (max-width: 1200px) and (orientation: portrait) {
     font-size: 20px;
   }
+
   @media only screen and (max-width: 768px) and (orientation: portrait) {
     font-size: 22px;
   }
@@ -168,7 +169,7 @@ header .nav-top li a:hover {
   }
   @media only screen and (max-width: 1200px) and (orientation: portrait) {
     height: auto;
-    top: 30%;
+    top: 34%;
   }
   @media only screen and (max-width: 768px) and (orientation: portrait) {
     height: 60%;
@@ -233,28 +234,50 @@ h4 {
 .template-item {
   display: flex;
   align-items: center;
-  height: 100vh;
-  @media only screen and (max-width: 1200px) and (orientation: portrait) {
-    height: 80vh;
-  }
+  height: 70vh;
   width: 65%;
   margin: 0 auto;
   justify-content: space-between;
+  @media only screen and (max-width: 992px) and (orientation: portrait) {
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100vh;
+  }
+}
+
+.template-item:first-child {
+  height: 100vh;
+}
+
+.template-item:nth-child(2) {
+  @media only screen and (max-width: 992px) and (orientation: portrait) {
+    flex-direction: column-reverse;
+  }
 }
 
 .template-item .text-container {
   max-width: 30%;
   margin: 0;
+  @media only screen and (max-width: 992px) and (orientation: portrait) {
+    max-width: 85%;
+    text-align: center;
+  }
 }
 
 .template-item h3 {
   color: #000000;
   padding-top: 30px;
   text-align: left;
+  @media only screen and (max-width: 992px) and (orientation: portrait) {
+    text-align: center;
+  }
 }
 
 .template-item h4 {
   text-align: left;
+  @media only screen and (max-width: 992px) and (orientation: portrait) {
+    text-align: center;
+  }
 }
 
 .template-item p {
@@ -262,6 +285,9 @@ h4 {
   padding-top: 22px;
   color: #6b6b6b;
   text-align: left;
+  @media only screen and (max-width: 992px) and (orientation: portrait) {
+    text-align: center;
+  }
 }
 
 #proposal img {
@@ -278,6 +304,9 @@ h4 {
   }
   @media only screen and (max-width: 1200px) and (orientation: portrait) {
     height: 60vh;
+  }
+  @media only screen and (max-width: 768px) and (orientation: portrait) {
+    height: auto;
   }
 }
 
@@ -311,6 +340,9 @@ h4 {
   max-width: 85%;
   margin: 0 auto;
   justify-content: space-around;
+  @media only screen and (max-width: 768px) and (orientation: portrait) {
+    padding-bottom: 200px;
+  }
 }
 
 .statistics h5 {
@@ -331,11 +363,17 @@ h4 {
 
 #dishes .template-item img {
   width: 50%;
+  @media only screen and (max-width: 992px) and (orientation: portrait) {
+    width: 80%;
+  }
 }
 
 #dishes .template-item {
   @media only screen and (max-width: 1200px) and (orientation: portrait) {
     height: 50vh;
+  }
+  @media only screen and (max-width: 992px) and (orientation: portrait) {
+    height: 100vh;
   }
 }
 
