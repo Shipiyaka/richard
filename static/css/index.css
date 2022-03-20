@@ -10,7 +10,8 @@ html,
 body {
   height: 100%;
   max-width: 100%;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  scroll-behavior: smooth; }
 
 p,
 h1,
@@ -60,7 +61,8 @@ header {
       font-size: 20px; } }
   @media only screen and (max-width: 768px) and (orientation: portrait) {
     header {
-      font-size: 22px; } }
+      font-size: 22px;
+      height: 5%; } }
 
 header .nav-top {
   display: flex;
@@ -72,6 +74,24 @@ header .nav-top {
     header .nav-top {
       max-width: 75%;
       font-size: 22px; } }
+  @media only screen and (max-width: 768px) and (orientation: portrait) {
+    header .nav-top {
+      background: linear-gradient(287.15deg, #450e4b 0%, #3c0c41 24.48%, rgba(207, 0, 99, 0) 100%), #cf0063;
+      flex-direction: column;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform: translateY(11%);
+      width: 100%;
+      max-width: 100%;
+      text-align: center;
+      justify-content: space-around;
+      height: 90%;
+      z-index: 3;
+      margin: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: 0.5s all; } }
 
 .logo img {
   width: 120px;
@@ -93,6 +113,46 @@ header .nav-top li a {
 header .nav-top li a:hover {
   color: #f8c10c; }
 
+@media only screen and (min-width: 769px) and (orientation: portrait) {
+  .burger {
+    display: none; } }
+
+#check-burger {
+  display: none; }
+
+#check-burger:checked ~ .nav-top {
+  opacity: 1; }
+
+#check-burger:checked ~ .aaa {
+  background-color: #cf0063; }
+
+#check-burger:checked > .ddd {
+  background-color: #cf0063; }
+
+.burger-span {
+  display: block;
+  cursor: pointer; }
+
+.burger-line {
+  width: 30px;
+  height: 2px;
+  background: white; }
+
+.burger-line:not(:last-child) {
+  margin-bottom: 5px; }
+
+#check-menu:checked ~ .first {
+  display: none; }
+
+#check-menu:checked ~ .second {
+  transform: rotate(45deg); }
+
+#check-menu:checked ~ .third {
+  transform: rotate(-45deg); }
+
+#check-menu:checked ~ .fourth {
+  display: none; }
+
 .main-banner-text {
   position: absolute;
   top: 50%;
@@ -102,6 +162,9 @@ header .nav-top li a:hover {
     .main-banner-text {
       transform: none;
       top: 20%; } }
+  @media only screen and (max-width: 992px) and (orientation: portrait) {
+    .main-banner-text {
+      width: 50%; } }
 
 .main-banner-text h1 {
   font-size: 75px; }
@@ -388,7 +451,7 @@ h4 {
 
 #get-started {
   background: linear-gradient(287.15deg, #450e4b 0%, #3c0c41 24.48%, rgba(207, 0, 99, 0) 100%), #cf0063;
-  height: 70vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;

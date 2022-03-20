@@ -12,6 +12,7 @@ body {
   height: 100%;
   max-width: 100%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 p,
@@ -71,9 +72,9 @@ header {
   @media only screen and (max-width: 1200px) and (orientation: portrait) {
     font-size: 20px;
   }
-
   @media only screen and (max-width: 768px) and (orientation: portrait) {
     font-size: 22px;
+    height: 5%;
   }
 }
 
@@ -86,6 +87,30 @@ header .nav-top {
   @media only screen and (max-width: 1200px) and (orientation: portrait) {
     max-width: 75%;
     font-size: 22px;
+  }
+  @media only screen and (max-width: 768px) and (orientation: portrait) {
+    background: linear-gradient(
+        287.15deg,
+        #450e4b 0%,
+        #3c0c41 24.48%,
+        rgba(207, 0, 99, 0) 100%
+      ),
+      #cf0063;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateY(11%);
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    justify-content: space-around;
+    height: 90%;
+    z-index: 3;
+    margin: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: 0.5s all;
   }
 }
 
@@ -113,6 +138,60 @@ header .nav-top li a:hover {
   color: #f8c10c;
 }
 
+.burger {
+  @media only screen and (min-width: 769px) and (orientation: portrait) {
+    display: none;
+  }
+}
+
+#check-burger {
+  display: none;
+}
+
+#check-burger:checked ~ .nav-top {
+  opacity: 1;
+}
+
+#check-burger:checked ~ .aaa {
+  background-color: #cf0063;
+}
+
+#check-burger:checked > .ddd {
+  background-color: #cf0063;
+}
+
+.burger-span {
+  display: block;
+  cursor: pointer;
+}
+
+.burger-line {
+  width: 30px;
+  height: 2px;
+  background: white;
+  // position: absolute;
+}
+
+.burger-line:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+#check-menu:checked ~ .first {
+  display: none;
+}
+
+#check-menu:checked ~ .second {
+  transform: rotate(45deg);
+}
+
+#check-menu:checked ~ .third {
+  transform: rotate(-45deg);
+}
+
+#check-menu:checked ~ .fourth {
+  display: none;
+}
+
 .main-banner-text {
   position: absolute;
   top: 50%;
@@ -121,6 +200,9 @@ header .nav-top li a:hover {
   @media only screen and (max-width: 1200px) and (orientation: portrait) {
     transform: none;
     top: 20%;
+  }
+  @media only screen and (max-width: 992px) and (orientation: portrait) {
+    width: 50%;
   }
 }
 
@@ -463,7 +545,7 @@ h4 {
       rgba(207, 0, 99, 0) 100%
     ),
     #cf0063;
-  height: 70vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
