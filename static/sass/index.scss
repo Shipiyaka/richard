@@ -117,6 +117,9 @@ header .nav-top {
 .logo img {
   width: 120px;
   max-width: none;
+  @media only screen and (max-width: 769px) and (orientation: portrait) {
+    width: 100px;
+  }
 }
 
 header .nav-top li {
@@ -139,7 +142,7 @@ header .nav-top li a:hover {
 }
 
 .burger {
-  @media only screen and (min-width: 769px) and (orientation: portrait) {
+  @media only screen and (min-width: 769px) {
     display: none;
   }
 }
@@ -152,14 +155,6 @@ header .nav-top li a:hover {
   opacity: 1;
 }
 
-#check-burger:checked ~ .aaa {
-  background-color: #cf0063;
-}
-
-#check-burger:checked > .ddd {
-  background-color: #cf0063;
-}
-
 .burger-span {
   display: block;
   cursor: pointer;
@@ -169,7 +164,6 @@ header .nav-top li a:hover {
   width: 30px;
   height: 2px;
   background: white;
-  // position: absolute;
 }
 
 .burger-line:not(:last-child) {
@@ -204,6 +198,10 @@ header .nav-top li a:hover {
   @media only screen and (max-width: 992px) and (orientation: portrait) {
     width: 50%;
   }
+  @media only screen and (max-width: 769px) and (orientation: portrait) {
+    width: 85%;
+    top: 15%;
+  }
 }
 
 .main-banner-text h1 {
@@ -211,12 +209,21 @@ header .nav-top li a:hover {
   @media only screen and (max-width: 1200px) {
     font-size: 47px;
   }
+  @media only screen and (max-width: 769px) and (orientation: portrait) {
+    font-size: 40px;
+  }
+  @media only screen and (max-width: 480px) and (orientation: portrait) {
+    font-size: 35px;
+  }
 }
 
 .main-banner-text h2 {
   font-size: 25px;
   @media only screen and (max-width: 1200px) {
     font-size: 20px;
+  }
+  @media only screen and (max-width: 480px) and (orientation: portrait) {
+    font-size: 18px;
   }
 }
 
@@ -230,6 +237,12 @@ header .nav-top li a:hover {
   border: 1px solid transparent;
   @media only screen and (max-width: 1200px) {
     font-size: 20px;
+  }
+  @media only screen and (max-width: 769px) and (orientation: portrait) {
+    font-size: 18px;
+  }
+  @media only screen and (max-width: 480px) and (orientation: portrait) {
+    padding: 18px 33px;
   }
 }
 
@@ -254,9 +267,9 @@ header .nav-top li a:hover {
     top: 34%;
   }
   @media only screen and (max-width: 768px) and (orientation: portrait) {
-    height: 60%;
+    height: 43%;
+    top: 45%;
   }
-
   object-fit: scale-down;
 }
 
@@ -278,6 +291,12 @@ header .nav-top li a:hover {
   margin: 0 auto;
 }
 
+.text-container {
+  @media only screen and (max-width: 481px) and (orientation: portrait) {
+    max-width: 85%;
+  }
+}
+
 h3 {
   font-size: 31px;
 }
@@ -297,6 +316,9 @@ h4 {
   @media only screen and (max-width: 1200px) and (orientation: portrait) {
     padding-top: 200px;
   }
+  @media only screen and (max-width: 769px) and (orientation: portrait) {
+    padding-top: 150px;
+  }
 }
 
 #profile-view img {
@@ -306,6 +328,9 @@ h4 {
   left: 0;
   right: 0;
   margin: auto;
+  @media only screen and (max-width: 769px) and (orientation: portrait) {
+    width: 100%;
+  }
 }
 
 #proposal {
@@ -353,6 +378,10 @@ h4 {
   @media only screen and (max-width: 992px) and (orientation: portrait) {
     text-align: center;
   }
+  @media only screen and (max-width: 481px) and (orientation: portrait) {
+    font-size: 25px;
+    padding-top: 20px;
+  }
 }
 
 .template-item h4 {
@@ -370,6 +399,7 @@ h4 {
   @media only screen and (max-width: 992px) and (orientation: portrait) {
     text-align: center;
   }
+  padding-top: 16px;
 }
 
 #proposal img {
@@ -399,6 +429,9 @@ h4 {
   margin: 0 auto;
   padding: 100px 0;
   justify-content: center;
+  @media only screen and (max-width: 481px) and (orientation: portrait) {
+    flex-direction: column;
+  }
 }
 
 .features h5 {
@@ -424,6 +457,9 @@ h4 {
   justify-content: space-around;
   @media only screen and (max-width: 768px) and (orientation: portrait) {
     padding-bottom: 200px;
+  }
+  @media only screen and (max-width: 481px) and (orientation: portrait) {
+    flex-direction: column;
   }
 }
 
@@ -515,6 +551,9 @@ h4 {
   margin: 0 auto;
   width: 3%;
   justify-content: space-between;
+  @media only screen and (max-width: 481px) and (orientation: portrait) {
+    width: 10%;
+  }
 }
 
 .square.dark {
@@ -550,6 +589,15 @@ h4 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @media only screen and (max-width: 481px) and (orientation: portrait) {
+    text-align: center;
+  }
+}
+
+#get-started .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #get-started h3 {
@@ -578,10 +626,15 @@ h4 {
 
 .wrapper {
   height: 85vh;
+  width: 85%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+}
+
+.get-updates-item {
+  width: 100%;
 }
 
 #get-updates p {
@@ -596,6 +649,7 @@ h4 {
 .subscribe-item {
   display: flex;
   padding-top: 40px;
+  justify-content: center;
 }
 
 input {
@@ -605,12 +659,31 @@ input {
   border: 0;
   margin-top: 20px;
   border: 1px solid transparent;
+  @media only screen and (max-width: 481px) and (orientation: portrait) {
+    padding: 18px 30px;
+    width: calc(100% - 104px);
+  }
 }
 
 #get-updates .getter {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   color: #000000;
+  @media only screen and (max-width: 481px) and (orientation: portrait) {
+    padding: 18px 30px;
+  }
+}
+
+#get-updates .getter.pc {
+  @media only screen and (max-width: 481px) {
+    display: none;
+  }
+}
+
+#get-updates .getter.mob {
+  @media only screen and (min-width: 482px) {
+    display: none;
+  }
 }
 
 footer {
@@ -628,6 +701,10 @@ footer img {
 .footer-item {
   display: flex;
   justify-content: space-between;
+  @media only screen and (max-width: 481px) and (orientation: portrait) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 .footer-item p {

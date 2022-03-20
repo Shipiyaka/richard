@@ -96,6 +96,9 @@ header .nav-top {
 .logo img {
   width: 120px;
   max-width: none; }
+  @media only screen and (max-width: 769px) and (orientation: portrait) {
+    .logo img {
+      width: 100px; } }
 
 header .nav-top li {
   display: inline-block;
@@ -113,7 +116,7 @@ header .nav-top li a {
 header .nav-top li a:hover {
   color: #f8c10c; }
 
-@media only screen and (min-width: 769px) and (orientation: portrait) {
+@media only screen and (min-width: 769px) {
   .burger {
     display: none; } }
 
@@ -122,12 +125,6 @@ header .nav-top li a:hover {
 
 #check-burger:checked ~ .nav-top {
   opacity: 1; }
-
-#check-burger:checked ~ .aaa {
-  background-color: #cf0063; }
-
-#check-burger:checked > .ddd {
-  background-color: #cf0063; }
 
 .burger-span {
   display: block;
@@ -165,18 +162,31 @@ header .nav-top li a:hover {
   @media only screen and (max-width: 992px) and (orientation: portrait) {
     .main-banner-text {
       width: 50%; } }
+  @media only screen and (max-width: 769px) and (orientation: portrait) {
+    .main-banner-text {
+      width: 85%;
+      top: 15%; } }
 
 .main-banner-text h1 {
   font-size: 75px; }
   @media only screen and (max-width: 1200px) {
     .main-banner-text h1 {
       font-size: 47px; } }
+  @media only screen and (max-width: 769px) and (orientation: portrait) {
+    .main-banner-text h1 {
+      font-size: 40px; } }
+  @media only screen and (max-width: 480px) and (orientation: portrait) {
+    .main-banner-text h1 {
+      font-size: 35px; } }
 
 .main-banner-text h2 {
   font-size: 25px; }
   @media only screen and (max-width: 1200px) {
     .main-banner-text h2 {
       font-size: 20px; } }
+  @media only screen and (max-width: 480px) and (orientation: portrait) {
+    .main-banner-text h2 {
+      font-size: 18px; } }
 
 .getter {
   padding: 20px 40px;
@@ -189,6 +199,12 @@ header .nav-top li a:hover {
   @media only screen and (max-width: 1200px) {
     .getter {
       font-size: 20px; } }
+  @media only screen and (max-width: 769px) and (orientation: portrait) {
+    .getter {
+      font-size: 18px; } }
+  @media only screen and (max-width: 480px) and (orientation: portrait) {
+    .getter {
+      padding: 18px 33px; } }
 
 .getter:hover {
   background: #f89ac8;
@@ -212,7 +228,8 @@ header .nav-top li a:hover {
       top: 34%; } }
   @media only screen and (max-width: 768px) and (orientation: portrait) {
     .back {
-      height: 60%; } }
+      height: 43%;
+      top: 45%; } }
 
 .arrow {
   position: absolute;
@@ -228,6 +245,10 @@ header .nav-top li a:hover {
   max-width: 44%;
   text-align: center;
   margin: 0 auto; }
+
+@media only screen and (max-width: 481px) and (orientation: portrait) {
+  .text-container {
+    max-width: 85%; } }
 
 h3 {
   font-size: 31px; }
@@ -245,6 +266,9 @@ h4 {
   @media only screen and (max-width: 1200px) and (orientation: portrait) {
     #profile-view h4 {
       padding-top: 200px; } }
+  @media only screen and (max-width: 769px) and (orientation: portrait) {
+    #profile-view h4 {
+      padding-top: 150px; } }
 
 #profile-view img {
   position: absolute;
@@ -253,6 +277,9 @@ h4 {
   left: 0;
   right: 0;
   margin: auto; }
+  @media only screen and (max-width: 769px) and (orientation: portrait) {
+    #profile-view img {
+      width: 100%; } }
 
 #proposal {
   margin: 0 auto;
@@ -293,6 +320,10 @@ h4 {
   @media only screen and (max-width: 992px) and (orientation: portrait) {
     .template-item h3 {
       text-align: center; } }
+  @media only screen and (max-width: 481px) and (orientation: portrait) {
+    .template-item h3 {
+      font-size: 25px;
+      padding-top: 20px; } }
 
 .template-item h4 {
   text-align: left; }
@@ -304,7 +335,8 @@ h4 {
   color: #000000;
   padding-top: 22px;
   color: #6b6b6b;
-  text-align: left; }
+  text-align: left;
+  padding-top: 16px; }
   @media only screen and (max-width: 992px) and (orientation: portrait) {
     .template-item p {
       text-align: center; } }
@@ -334,6 +366,9 @@ h4 {
   margin: 0 auto;
   padding: 100px 0;
   justify-content: center; }
+  @media only screen and (max-width: 481px) and (orientation: portrait) {
+    .features {
+      flex-direction: column; } }
 
 .features h5 {
   color: #000000;
@@ -356,6 +391,9 @@ h4 {
   @media only screen and (max-width: 768px) and (orientation: portrait) {
     .statistics {
       padding-bottom: 200px; } }
+  @media only screen and (max-width: 481px) and (orientation: portrait) {
+    .statistics {
+      flex-direction: column; } }
 
 .statistics h5 {
   color: #000000;
@@ -431,6 +469,9 @@ h4 {
   margin: 0 auto;
   width: 3%;
   justify-content: space-between; }
+  @media only screen and (max-width: 481px) and (orientation: portrait) {
+    .squares {
+      width: 10%; } }
 
 .square.dark {
   width: 7px;
@@ -456,6 +497,14 @@ h4 {
   flex-direction: column;
   align-items: center;
   justify-content: center; }
+  @media only screen and (max-width: 481px) and (orientation: portrait) {
+    #get-started {
+      text-align: center; } }
+
+#get-started .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
 
 #get-started h3 {
   font-size: 38px; }
@@ -479,10 +528,14 @@ h4 {
 
 .wrapper {
   height: 85vh;
+  width: 85%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between; }
+
+.get-updates-item {
+  width: 100%; }
 
 #get-updates p {
   color: #6b6b6b;
@@ -493,7 +546,8 @@ h4 {
 
 .subscribe-item {
   display: flex;
-  padding-top: 40px; }
+  padding-top: 40px;
+  justify-content: center; }
 
 input {
   padding: 20px 40px;
@@ -502,11 +556,26 @@ input {
   border: 0;
   margin-top: 20px;
   border: 1px solid transparent; }
+  @media only screen and (max-width: 481px) and (orientation: portrait) {
+    input {
+      padding: 18px 30px;
+      width: calc(100% - 104px); } }
 
 #get-updates .getter {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   color: #000000; }
+  @media only screen and (max-width: 481px) and (orientation: portrait) {
+    #get-updates .getter {
+      padding: 18px 30px; } }
+
+@media only screen and (max-width: 481px) {
+  #get-updates .getter.pc {
+    display: none; } }
+
+@media only screen and (min-width: 482px) {
+  #get-updates .getter.mob {
+    display: none; } }
 
 footer {
   display: flex;
@@ -521,6 +590,10 @@ footer img {
 .footer-item {
   display: flex;
   justify-content: space-between; }
+  @media only screen and (max-width: 481px) and (orientation: portrait) {
+    .footer-item {
+      flex-wrap: wrap;
+      justify-content: center; } }
 
 .footer-item p {
   padding: 0 20px;
