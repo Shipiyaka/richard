@@ -128,26 +128,36 @@ header .nav-top li a:hover {
 
 .burger-span {
   display: block;
-  cursor: pointer; }
+  cursor: pointer;
+  padding: 10px;
+  margin-right: -10px; }
 
 .burger-line {
   width: 30px;
   height: 2px;
-  background: white; }
+  background: white;
+  transition: 0.3s all; }
 
-.burger-line:not(:last-child) {
+.second {
+  position: absolute; }
+
+.first,
+.third {
   margin-bottom: 5px; }
 
-#check-menu:checked ~ .first {
+#check-burger:checked ~ label .burger-span .burger-line.first {
   display: none; }
 
-#check-menu:checked ~ .second {
-  transform: rotate(45deg); }
+#check-burger:checked ~ label .burger-span .burger-line.second {
+  transform: rotate(45deg);
+  background: #f8c10c;
+  height: 2px; }
 
-#check-menu:checked ~ .third {
-  transform: rotate(-45deg); }
+#check-burger:checked ~ label .burger-span .burger-line.third {
+  transform: rotate(-45deg);
+  background: #f8c10c; }
 
-#check-menu:checked ~ .fourth {
+#check-burger:checked ~ label .burger-span .burger-line.fourth {
   display: none; }
 
 .main-banner-text {
