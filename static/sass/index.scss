@@ -32,6 +32,8 @@ img {
 
 section,
 div,
+input,
+button,
 a,
 p,
 h1,
@@ -84,11 +86,11 @@ header .nav-top {
   list-style-type: none;
   justify-content: end;
   max-width: 50%;
-  @media only screen and (max-width: 1200px) and (orientation: portrait) {
+  @media only screen and (max-width: 1200px) {
     max-width: 75%;
-    font-size: 22px;
+    font-size: 18px;
   }
-  @media only screen and (max-width: 768px) and (orientation: portrait) {
+  @media only screen and (max-width: 768px) {
     background: linear-gradient(
         287.15deg,
         #450e4b 0%,
@@ -202,14 +204,14 @@ header .nav-top li a:hover {
   top: 50%;
   transform: translate(0, -50%);
   z-index: 2;
-  @media only screen and (max-width: 1200px) and (orientation: portrait) {
+  @media only screen and (max-width: 1200px) {
     transform: none;
     top: 20%;
   }
-  @media only screen and (max-width: 992px) and (orientation: portrait) {
+  @media only screen and (max-width: 992px) {
     width: 50%;
   }
-  @media only screen and (max-width: 769px) and (orientation: portrait) {
+  @media only screen and (max-width: 769px) {
     width: 85%;
     top: 15%;
   }
@@ -246,6 +248,7 @@ header .nav-top li a:hover {
   color: white;
   margin-top: 20px;
   border: 1px solid transparent;
+  transition: 0.1s linear;
   @media only screen and (max-width: 1200px) {
     font-size: 20px;
   }
@@ -255,12 +258,6 @@ header .nav-top li a:hover {
   @media only screen and (max-width: 480px) and (orientation: portrait) {
     padding: 18px 33px;
   }
-}
-
-.getter:hover {
-  background: #f89ac8;
-  color: black;
-  transition: 0.1s linear;
 }
 
 .back {
@@ -620,8 +617,11 @@ h4 {
 }
 
 .getter:hover {
-  background: transparent;
+  background: #9d34b3;
   border: 1px solid #9d34b3;
+}
+
+#get-updates .getter:hover {
   color: white;
 }
 
@@ -679,7 +679,6 @@ input {
 #get-updates .getter {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  color: #000000;
   @media only screen and (max-width: 481px) and (orientation: portrait) {
     padding: 18px 30px;
   }
